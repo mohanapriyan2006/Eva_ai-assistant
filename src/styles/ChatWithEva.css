@@ -1,0 +1,9 @@
+.parent {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+.chat-space{
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 87, 163, 0.712) transparent;
+}
