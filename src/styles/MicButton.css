@@ -1,0 +1,22 @@
+.loader-btn {
+    background-color: rgba(0, 73, 151, 0.441);
+    border-radius: 50%;
+    box-shadow: -15px -15px 15px #29a3fa, 15px -15px 15px #1d9dff, 15px 15px 15px #00bfff, -15px 15px 15px #00c3ff, -15px 0 15px #00ffea, 15px 0 15px #00ffd5;
+    animation: rotate 2s infinite ease-in-out;
+    transform: rotate(0);
+}
+
+.loader-btn div button{
+    animation: none;
+    z-index: 20;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+
+}

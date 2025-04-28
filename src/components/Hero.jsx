@@ -4,7 +4,7 @@ import eva from '../assets/eva.png'
 
 const Hero = () => {
     return (
-        <div className="place-items-center sm:mt-5">
+        <div className="place-items-center sm:mt-5 mt-2">
             <div className='text-center mb-4 sm:mr-15 mr-5'>
                 <h1 className='logo text-4xl'>Eva</h1>
                 <p className='font-medium'>Ai assistant</p>

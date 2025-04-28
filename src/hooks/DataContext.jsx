@@ -20,7 +20,11 @@ export const DataProvider = ({ children }) => {
 
     // --------------------
     // Speech functions
-    const [voiceText, setVoiceText] = useState('Hello Sir, How Can I help you Today ?')
+    const [voiceText, setVoiceText] = useState('Hello Sir, How Can I help you Today ?');
+
+    const [isSpeak, setisSpeak] = useState(false)
+    const [isThink, setIsThink] = useState(false)
+    const [isListen, setisListen] = useState(false)
 
     const synth = window.speechSynthesis;
     const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
@@ -34,12 +38,14 @@ export const DataProvider = ({ children }) => {
         }
     }, [synth]);
 
+
     const speak = (text) => {
         if (!text) {
             console.error('Speak: No text provided!');
             return;
         }
-
+        setIsThink(false)
+        setisSpeak(true)
         const trySpeak = () => {
             const voices = synth.getVoices();
             if (!voices.length) {
@@ -72,12 +78,23 @@ export const DataProvider = ({ children }) => {
         trySpeak();
     };
 
+    useEffect(() => {
+        setTimeout(() => setisSpeak(false), voiceText.length * 60)
+    }, [isSpeak])
+
+
+    useEffect(() => {
+        speak(' ')
+    }, [])
 
     const startListening = () => {
+        setisListen(true);
         recognition.start();
         recognition.onresult = async (event) => {
-            const transcript = event.results[0][0].transcript;
 
+            const transcript = event.results[0][0].transcript;
+            setisListen(false);
+            setIsThink(true)
             setVoiceText(transcript)
             const instruction = `Answer briefly and simple : ${transcript}`;
 
@@ -87,7 +104,6 @@ export const DataProvider = ({ children }) => {
             try {
                 const res = await gemini(history);
                 console.log('Gemini response:', res);
-
                 setVoiceText(res)
                 speak(res);
 
@@ -158,6 +174,9 @@ export const DataProvider = ({ children }) => {
             voiceText, setVoiceText,
             speak,
             startListening,
+            isSpeak, setisSpeak,
+            isThink, setIsThink,
+            isListen, setisListen,
             chat, setChat,
             handlePromptSend,
             prompt, setPrompt,
