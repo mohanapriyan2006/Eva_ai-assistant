@@ -6,7 +6,7 @@ const ai = new GoogleGenerativeAI(YOUR_API_KEY);
 
 async function gemini(history) {
 
-    const model = ai.getGenerativeModel({ model: "gemini-1.5-flash" });
+    const model = ai.getGenerativeModel({ model: "gemini-2.0-flash" });
 
 
     try {

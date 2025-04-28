@@ -1,11 +1,26 @@
 import { createContext, useEffect, useState } from "react";
-import gemini from './AiAPI';
+import gemini from './aiAPI';
+import { useLocation, useNavigate } from "react-router-dom";
 
 export const DataContext = createContext();
 
 export const DataProvider = ({ children }) => {
-    const [prompt, setPrompt] = useState('')
-    const [chat, setChat] = useState([]);
+
+    // navigate
+    const curLoc = useLocation();
+    const [isChatActive, setIsChatActive] = useState(
+        () => {
+            if (curLoc.pathname == '/chat') return true;
+            else return false
+        }
+    );
+    const navigate = useNavigate();
+
+    const [info, setInfo] = useState(false)
+
+    // --------------------
+    // Speech functions
+    const [voiceText, setVoiceText] = useState('Hello Sir, How Can I help you Today ?')
 
     const synth = window.speechSynthesis;
     const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
@@ -18,9 +33,6 @@ export const DataProvider = ({ children }) => {
             };
         }
     }, [synth]);
-
-    // --------------------
-    // Speech functions
 
     const speak = (text) => {
         if (!text) {
@@ -66,22 +78,24 @@ export const DataProvider = ({ children }) => {
         recognition.onresult = async (event) => {
             const transcript = event.results[0][0].transcript;
 
+            setVoiceText(transcript)
             const instruction = `Answer briefly and simple : ${transcript}`;
 
+
+            const history = [{ role: 'user', parts: [{ text: instruction }] },];
+
             try {
-                const res = await gemini(instruction);
+                const res = await gemini(history);
                 console.log('Gemini response:', res);
 
-                if (typeof res === 'string' && res.trim() !== '') {
-                    speak(res);
-                } else {
-                    console.error('Invalid response format:', res);
-                    speak('Sorry, I could not understand the response.');
-                }
+                setVoiceText(res)
+                speak(res);
+
 
             } catch (err) {
                 console.error('Error text:', err);
-                speak('Sorry, I could not understand.');
+                setVoiceText('Sorry, Something went wrong !')
+                speak('Sorry, Something went wrong !');
             }
 
             recognition.stop();
@@ -96,6 +110,10 @@ export const DataProvider = ({ children }) => {
     // -------------------------------
     // chat functions
 
+    const [prompt, setPrompt] = useState('')
+    const [chat, setChat] = useState([]);
+
+
     const getResponseFromBot = async (currentChat) => {
 
         const updateChat = (res) => {
@@ -109,6 +127,7 @@ export const DataProvider = ({ children }) => {
             role,
             parts: [{ text }]
         }));
+
 
         try {
             const res = await gemini(history);
@@ -136,11 +155,14 @@ export const DataProvider = ({ children }) => {
 
     return (
         <DataContext.Provider value={{
-            chat, setChat,
+            voiceText, setVoiceText,
             speak,
             startListening,
+            chat, setChat,
             handlePromptSend,
-            prompt, setPrompt
+            prompt, setPrompt,
+            isChatActive, setIsChatActive, navigate,
+            info, setInfo
         }}>
             {children}
         </DataContext.Provider>

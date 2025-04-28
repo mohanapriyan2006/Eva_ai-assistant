@@ -1,0 +1,17 @@
+.speech-text {
+    animation: slow-scroll 8s 2s infinite linear;
+}
+
+@keyframes slow-scroll {
+    0% {
+        top: 0%;
+    }
+
+    50% {
+        top: -40%;
+    }
+
+    100% {
+        top: -80%;
+    }
+}
