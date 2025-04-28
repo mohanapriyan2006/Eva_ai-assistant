@@ -20,7 +20,7 @@ const MicButton = () => {
                     onClick={() => startListening()}
                     className="mic-home border-2 p-4  rounded-full border-blue-600 bg-blue-800/60 hover:bg-blue-800/80 cursor-pointer relative z-20"
                 >
-                    <img className='h-12 w-12' src={mic} alt="mic" />
+                    <img className={`h-12 w-12 ${isListen ? 'animate-pulse':''}`} src={mic} alt="mic" />
                 </button>
             </div>
         </div>

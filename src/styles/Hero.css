@@ -1,0 +1,39 @@
+.eva-animate {
+    position: relative;
+    z-index: 888;
+    top: 70%;
+    left: 50%;
+    transform: rotate(-30deg) scale(0.1);
+    animation: apear 3s 0.5s forwards, shake 2s 3.6s infinite alternate;
+}
+
+@keyframes apear {
+    0% {
+        top: 70%;
+        left: 50%;
+        transform: rotate(-30deg) scale(0.1);
+    }
+
+    90% {
+        top: -4%;
+        left: 0%;
+        transform: rotate(0deg) scale(1);
+    }
+
+    100% {
+        top: -2%;
+        left: 0%;
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: translateY(-2%);
+    }
+
+
+    100% {
+        transform: translateY(2%);
+    }
+}

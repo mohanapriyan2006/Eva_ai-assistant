@@ -6,13 +6,26 @@ import '../styles/ChatWithEva.css'
 
 const Chat = () => {
 
-  const { chat, prompt, setPrompt, handlePromptSend, isChatActive, setIsChatActive, navigate } = useContext(DataContext);
+  const { chat, setChat, prompt, setPrompt, handlePromptSend, isChatActive, setIsChatActive, navigate } = useContext(DataContext);
 
   const chatBoxRef = useRef()
 
   useEffect(() => {
     chatBoxRef.current.scrollTo({ top: chatBoxRef.current.scrollHeight, behavior: 'smooth' })
   }, [chat])
+
+  const [clearOn, setclearOn] = useState(false)
+
+  const ClearDiv = () => {
+    return (
+      <div
+        className={`${clearOn ? 'scale-100' : 'scale-0'} clear-div h-fit w-fit p-2 flex rounded font-medium text-red-400 border-1 border-blue-700 bg-blue-950 absolute top-12 right-2 cursor-pointer`}
+        onClick={() => {setChat([]); setclearOn(false)}}
+      >
+        <i className='material-symbols-outlined'>close</i><p> clear chat</p>
+      </div>
+    )
+  }
 
 
   return (
@@ -26,10 +39,17 @@ const Chat = () => {
         <p className="text-center flex-1">Chat with <span className="logo font-semibold text-xl">Eva</span></p>
         <span
           className="material-symbols-outlined cursor-pointer"
+          onClick={() => setclearOn(prev => !prev)}
         >more_horiz</span>
       </div>
 
-      <div ref={chatBoxRef} className="chat-space scroll-bar px-4 py-6">
+      <ClearDiv />
+
+      <div 
+      ref={chatBoxRef} 
+      className="chat-space scroll-bar px-4 py-6"
+      onClick={() => setclearOn(false)}
+      >
         {
           chat.map((item, id) => (
             <ChatSpace key={id} chat={item} />
