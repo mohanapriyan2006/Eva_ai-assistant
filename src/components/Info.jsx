@@ -7,7 +7,7 @@ const Info = () => {
   const { info } = useContext(DataContext)
 
   return (
-    <div className={`info-div absolute  ${info ? 'sm:right-50 right-0 scale-100 top-1' : 'right-0 top-60 scale-0'} z-100 sm:w-100 w-fit sm:m-0 mx-5 h-fit sm:p-5 p-3 flex flex-col gap-4 border-2 rounded-2xl border-blue-800 bg-blue-900/40 shadow-2xl transition-all`}>
+    <div className={`info-div absolute  ${info ? 'sm:right-50 right-0 scale-100 top-1' : 'right-0 top-60 scale-0'} z-100 sm:w-100 w-fit sm:m-0 mx-5 h-fit sm:p-4 p-3 flex flex-col gap-4 border-2 rounded-2xl border-blue-800 bg-blue-900/40 shadow-2xl transition-all`}>
       <div className='text-center'>
         <h1 className='logo text-2xl'>Eva</h1>
         <p className='font-medium'>Ai assistant</p>

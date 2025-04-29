@@ -8,7 +8,7 @@ const Footer = () => {
     const { isChatActive, setIsChatActive, navigate, info, setInfo } = useContext(DataContext)
 
     return (
-        <div className='flex flex-row  justify-between mx-10 md:-mt-2 '>
+        <div className='flex flex-row  justify-between mx-10 md:-mt-12 '>
             <div className='flex gap-2 items-center text-[24px] sm:-mt-5'>
                 <span
                     className=" border-2 p-2 rounded-full border-blue-600 bg-blue-800/60 hover:bg-blue-800/80 cursor-pointer"
@@ -18,7 +18,7 @@ const Footer = () => {
                 </span>
                 <span className='sm:block hidden'>{isChatActive ? 'Speak' : 'Chat'} with <span className='logo text-3xl'>Eva</span></span>
             </div>
-            <div className='flex gap-2 items-end text-[24px] mr-3 '>
+            <div className='flex gap-2 items-end text-[24px] mr-3 sm:-mt-5'>
                 <span
                 onClick={() => setInfo(prev => !prev)} 
                 className=" border-2 p-3 rounded-full border-blue-600 bg-blue-800/60 hover:bg-blue-800/80 cursor-pointer"

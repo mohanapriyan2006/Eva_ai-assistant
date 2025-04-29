@@ -11,7 +11,7 @@ const Hero = () => {
                 <p className='font-medium'>Ai assistant</p>
             </div>
             <div className='relative md:h-120 h-70 w-auto'>
-                <img className='md:h-120 h-70 w-auto eva-animate' src={eva} alt="eva" />
+                <img className='md:h-100 h-70 w-auto eva-animate' src={eva} alt="eva" />
             </div>
 
         </div>

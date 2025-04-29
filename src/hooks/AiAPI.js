@@ -1,8 +1,7 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { evaInstructions } from "./eva-config";
 
-const YOUR_API_KEY = import.meta.env.VITE_API_KEY;
-
+const YOUR_API_KEY =__API_URL__;
 const ai = new GoogleGenerativeAI(YOUR_API_KEY);
 
 async function gemini(history) {
