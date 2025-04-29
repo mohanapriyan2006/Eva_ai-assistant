@@ -2,7 +2,6 @@ import { createContext, useEffect, useState } from "react";
 import gemini from './aiAPI.js';
 import { useLocation, useNavigate } from "react-router-dom";
 
-
 export const DataContext = createContext();
 
 export const DataProvider = ({ children }) => {
