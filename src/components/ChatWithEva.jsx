@@ -20,7 +20,7 @@ const Chat = () => {
     return (
       <div
         className={`${clearOn ? 'scale-100' : 'scale-0 hidden'} clear-div h-fit w-fit p-2 flex rounded font-medium text-red-400 border-1 border-blue-700 bg-blue-950 absolute top-12 right-2 cursor-pointer`}
-        onClick={() => {setChat([]); setclearOn(false)}}
+        onClick={() => { setChat([]); setclearOn(false) }}
       >
         <i className='material-symbols-outlined'>close</i><p> clear chat</p>
       </div>
@@ -45,10 +45,10 @@ const Chat = () => {
 
       <ClearDiv />
 
-      <div 
-      ref={chatBoxRef} 
-      className="chat-space scroll-bar px-4 py-6"
-      onClick={() => setclearOn(false)}
+      <div
+        ref={chatBoxRef}
+        className="chat-space scroll-bar px-4 py-6"
+        onClick={() => setclearOn(false)}
       >
         {
           chat.map((item, id) => (
@@ -64,7 +64,6 @@ const Chat = () => {
           placeholder="Type anything..."
           value={prompt}
           onChange={(e) => setPrompt(e.target.value)}
-          autoFocus
         />
         {prompt.length ? <button
           className="border-2 rounded-full w-12 h-12 border-blue-500 bg-blue-600 absolute sm:right-5 right-2.5 cursor-pointer hover:bg-blue-700 transition"
