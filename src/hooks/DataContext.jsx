@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-import gemini from './aiAPI';
+import gemini from './aiAPI.js';
 import { useLocation, useNavigate } from "react-router-dom";
 
 
