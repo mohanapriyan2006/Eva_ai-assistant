@@ -1,5 +1,5 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
-require('dotenv').config();
+import { evaInstructions } from "./eva-config";
 
 const YOUR_API_KEY = import.meta.env.VITE_API_KEY;
 
@@ -12,7 +12,12 @@ async function gemini(history) {
 
     try {
         const result = await model.generateContent({
-            contents: history,
+            contents: [{
+                role: 'model',
+                parts: [{
+                    text: `You are EVA, an AI assistant created by MOHANAPRIYAN M.Follow these core behavior rules defined in JSON:\n\n${evaInstructions}`
+                }]
+            }, ...history],
         });
         const response = result.response.candidates[0].content.parts[0].text
             .replace(/\*\*(.*?)\*\*/g, '$1')

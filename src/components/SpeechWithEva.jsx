@@ -22,7 +22,7 @@ const Speech = () => {
             <div className="md:h-50 h-25 sm:w-100 md:w-140 w-70  overflow-hidden relative flex justify-center">
                 {isListen && <Listening />}
                 {isThink && <Thinking />}
-                {(!isListen && !isThink) && <div className={`absolute ${voiceText.length >= 60 ? 'speech-text' : ' '} text-wrap bg-gradient-to-r from-white to-blue-400 bg-clip-text text-transparent md:text-5xl text-3xl font-semibold`}>
+                {(!isListen && !isThink) && <div className={`absolute ${voiceText.length >= 60? 'speech-text' : ' '} text-wrap bg-gradient-to-r from-white to-blue-400 bg-clip-text text-transparent md:text-5xl text-3xl font-semibold`}>
                     {voiceText}
                 </div>}
             </div>

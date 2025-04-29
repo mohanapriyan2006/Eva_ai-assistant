@@ -3,7 +3,7 @@ import '../../styles/Speaking.css'
 
 const Speaking = () => {
     return (
-        <div className='flex items-center justify-center mr-15'>
+        <div className='flex items-center justify-center mr-15 h-20'>
             <div className="loader l1"></div>
             <div className="loader l2"></div>
             <div className="loader l3"></div>

@@ -11,14 +11,14 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-image: linear-gradient(black,rgb(0, 0, 0),rgb(0, 12, 50));
+    background-image: linear-gradient(black, rgb(0, 0, 0), rgb(0, 12, 50));
     background-size: 1dvb;
     background-repeat: repeat;
     color: white;
     height: 100dvh;
 }
 
-*{
+* {
     transition: 0.2s ease-in-out;
 }
 

@@ -8,9 +8,7 @@ import { DataProvider } from './hooks/DataContext.jsx'
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <StrictMode>
-      <DataProvider>
         <App />
-      </DataProvider>
     </StrictMode>
   </BrowserRouter>,
 )

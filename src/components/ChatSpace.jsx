@@ -6,7 +6,7 @@ const ChatSpace = ({ chat }) => {
     return (
         <div className={`flex my-5 ${chat.role == 'user' ? 'justify-end' : ''}`}>
             {chat.role == 'model' && <img className='h-8 w-8 drop-shadow-lg drop-shadow-blue-500/80 ' src={evaI} alt="eva" />}
-            <p className={`border w-fit max-w-[80%]  ${chat.role == 'user' ? 'bg-blue-900/25' : 'bg-blue-900/80'}  border-blue-600 p-2 rounded`}>{chat.text}</p>
+            <p className={`border w-fit max-w-[80%]  ${chat.role == 'user' ? 'bg-blue-900/25' : 'bg-blue-900/80'}  border-blue-600 p-2 rounded text-wrap overflow-x-auto`}>{chat.text}</p>
         </div>
     )
 }

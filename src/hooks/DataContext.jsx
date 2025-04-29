@@ -2,6 +2,7 @@ import { createContext, useEffect, useState } from "react";
 import gemini from './aiAPI';
 import { useLocation, useNavigate } from "react-router-dom";
 
+
 export const DataContext = createContext();
 
 export const DataProvider = ({ children }) => {
@@ -96,14 +97,14 @@ export const DataProvider = ({ children }) => {
             setisListen(false);
             setIsThink(true)
             setVoiceText(transcript)
-            const instruction = `Answer briefly and simple : ${transcript}`;
+            const instruction = `instruction : 'Answer briefly and simple and note "avoid emojis then don't mention it"' : ${transcript}`;
 
 
             const history = [{ role: 'user', parts: [{ text: instruction }] },];
 
             try {
                 const res = await gemini(history);
-                console.log('Gemini response:', res);
+                console.log('Eva response:', res);
                 setVoiceText(res)
                 speak(res);
 
@@ -126,6 +127,7 @@ export const DataProvider = ({ children }) => {
     // -------------------------------
     // chat functions
 
+
     const [prompt, setPrompt] = useState('')
     const [chat, setChat] = useState([]);
 
@@ -143,7 +145,6 @@ export const DataProvider = ({ children }) => {
             role,
             parts: [{ text }]
         }));
-
 
         try {
             const res = await gemini(history);
