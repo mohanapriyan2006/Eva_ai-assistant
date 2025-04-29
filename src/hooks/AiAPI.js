@@ -1,4 +1,5 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
+require('dotenv').config();
 
 const YOUR_API_KEY = import.meta.env.VITE_API_KEY;
 
