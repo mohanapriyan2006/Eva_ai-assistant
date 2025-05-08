@@ -96,10 +96,15 @@ export const DataProvider = ({ children }) => {
             setisListen(false);
             setIsThink(true)
             setVoiceText(transcript)
-            const instruction = `instruction : 'Answer briefly and simple and note "avoid emojis then don't mention it"' : ${transcript}`;
+            // const instruction = `instruction - answer briefly and simple  : ${transcript}`;
 
 
-            const history = [{ role: 'user', parts: [{ text: instruction }] },];
+            const history = [, {
+                role: 'model',
+                parts: [{
+                    text: `Your response should be simple and briefly without emoji`
+                }]
+            }, { role: 'user', parts: [{ text: transcript }] },];
 
             try {
                 const res = await gemini(history);
@@ -187,3 +192,4 @@ export const DataProvider = ({ children }) => {
         </DataContext.Provider>
     );
 };
+
