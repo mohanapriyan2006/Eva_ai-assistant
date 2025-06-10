@@ -1,6 +1,6 @@
 # 🤖 Eva – Personal AI Voice & Chat Assistant
 
-#### - 🔗 Meet our ***Eva🤖*** : [Eva Ai Assistant](https://eva-ai-assistant.vercel.app/)
+## 🔗 Meet our ***Eva🤖*** : [Eva Ai Assistant](https://eva-ai-assistant.vercel.app/)
 
 **Eva** is your smart, stylish, and conversational personal assistant built with modern web technologies. Designed to interact via **both voice and chat**, Eva makes everyday digital interactions more natural, efficient, and hands-free.
 
@@ -18,6 +18,13 @@
 - **AI Integration:** AI APIs (Gemini Ai)
 - **Voice Capabilities:** Web Speech API (Speech Recognition + Speech Synthesis)
 
+## 🎨 Design
+![image1](./screenshots/image1.png)
+![image2](./screenshots/image2.png)
+![image3](./screenshots/image3.png)
+
+## 💻 Preview
+![Preview](./screenshots/preview.gif "Eva ai site")
 
 
 ---
