@@ -26,6 +26,10 @@
 ## 💻 Preview
 ![Preview](./screenshots/preview.gif "Eva ai site")
 
+## 🖥️ Video Explaination
+[Video Link](https://www.linkedin.com/posts/mohanapriyan-m2006_ai-reactjs-tailwindcss-activity-7326215037503557634-xM6L?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEdfjWABL_2j98un4JlBtZDRvHOOIBs2IsE)
+
+_click and watch video_
 
 ---
 
