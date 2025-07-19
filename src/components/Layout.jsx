@@ -15,7 +15,7 @@ const Layout = () => {
     const smDevice = window.innerWidth <= 645;
     return (
         <>
-            <div className={`sm:h-screen sm:blur-none ${info ? 'blur-lg' : ''} flex sm:flex-row flex-col sm:justify-evenly md:gap-20 gap-2 `} onClick={() => setInfo(false)}>
+            <div className={`sm:h-screen sm:blur-none ${info ? 'blur-lg' : ''} flex sm:flex-row flex-col sm:justify-center md:gap-[10%] gap-2 `} onClick={() => setInfo(false)}>
 
                 {(smDevice && !isChatActive) && < Hero />}
                 {!smDevice && <Hero />}
