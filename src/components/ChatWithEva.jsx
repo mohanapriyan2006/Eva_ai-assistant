@@ -29,7 +29,7 @@ const Chat = () => {
 
 
   return (
-    <div className="parent h-dvh sm:h-140  sm:my-4 sm:border-2 sm:border-blue-500 sm:rounded-[20px] sm:w-[380px] w-[full] relative popUp">
+    <div className="parent h-dvh sm:h-140 shadow-lg shadow-blue-400/20 hover:scale-[1.02] hover:shadow-xl hover:shadow-blue-500/80  sm:my-4 sm:border-2 sm:border-blue-500 sm:rounded-[20px] sm:w-[380px] w-[full] relative popUp">
 
       <div className="chat-header flex justify-between items-center p-4">
         <span
@@ -61,7 +61,7 @@ const Chat = () => {
         <input
           className="flex-1 border-2 border-blue-800 rounded-full p-3 focus:outline-none focus:ring-2 focus:ring-blue-400"
           type="text"
-          placeholder="Type anything..."
+          placeholder="  Type anything..."
           value={prompt}
           onChange={(e) => setPrompt(e.target.value)}
         />

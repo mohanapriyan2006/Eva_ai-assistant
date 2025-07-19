@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import evaI from '../assets/evaI.png';
 
 const ChatSpace = ({ chat }) => {

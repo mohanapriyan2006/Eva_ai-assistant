@@ -1,5 +1,5 @@
 .parent {
     display: grid;
     grid-template-rows: auto 1fr auto;
-    background-image: linear-gradient(black, rgb(0, 0, 0), rgb(0, 12, 50));
+    background-image: linear-gradient(black, rgb(0, 0, 0) , rgb(1, 7, 23), rgb(2, 13, 50));
 }
