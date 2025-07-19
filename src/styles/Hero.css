@@ -21,7 +21,7 @@
     }
 
     100% {
-        top: -2%;
+        top: 0%;
         left: 0%;
         transform: rotate(0deg) scale(1);
     }
