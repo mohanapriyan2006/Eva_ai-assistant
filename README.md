@@ -1,13 +1,36 @@
-# React + Vite
+# 🤖 Eva – Personal AI Voice & Chat Assistant
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🔗 Meet our ***Eva🤖*** : [Eva Ai Assistant](https://eva-ai-assistant.vercel.app/)
 
-Currently, two official plugins are available:
+**Eva** is your smart, stylish, and conversational personal assistant built with modern web technologies. Designed to interact via **both voice and chat**, Eva makes everyday digital interactions more natural, efficient, and hands-free.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌟 Highlights
 
-## Expanding the ESLint configuration
+- 🎤 **Voice & Chat Interface** – Talk to Eva or type your queries—she listens and responds either way.
+- 🧠 **AI-Powered Conversations** – Integrated with cutting-edge AI APIs for smooth, context-aware responses.
+- 🖥️ **Built with React.js** – Fast, dynamic, and responsive frontend architecture.
+- 💡 **Web Speech API Integration** – Enables real-time voice recognition and speech synthesis.
+- 🎨 **Tailwind CSS UI** – A sleek, responsive, and modern design that looks great on all devices.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-"# Ai-voice-assistant" 
+## 🛠️ Tech Stack
+- **Frontend:** React.js
+- **Styling:** Tailwind CSS
+- **AI Integration:** AI APIs (Gemini Ai)
+- **Voice Capabilities:** Web Speech API (Speech Recognition + Speech Synthesis)
+
+## 🎨 Design
+![image1](./screenshots/image1.png)
+![image2](./screenshots/image2.png)
+![image3](./screenshots/image3.png)
+
+## 💻 Preview
+![Preview](./screenshots/preview.gif "Eva ai site")
+
+## 🖥️ Video Explanation
+[**Video Link** 🚀](https://www.linkedin.com/posts/mohanapriyan-m2006_ai-reactjs-tailwindcss-activity-7326215037503557634-xM6L?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEdfjWABL_2j98un4JlBtZDRvHOOIBs2IsE)
+
+_click and watch video_
+
+---
+
+> *Eva isn't just an assistant—she's your digital companion.* ✨
