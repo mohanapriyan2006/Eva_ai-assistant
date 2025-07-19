@@ -14,7 +14,7 @@ async function gemini(history) {
             contents: [{
                 role: 'model',
                 parts: [{
-                    text: `You are EVA, an AI assistant created by MOHANAPRIYAN M.Follow these core behavior rules defined in JSON:\n\n${evaInstructions}`
+                    text: `You are EVA, an AI assistant.Follow these core behavior rules defined in JSON:\n\n${evaInstructions}`
                 }]
             }, ...history],
         });
