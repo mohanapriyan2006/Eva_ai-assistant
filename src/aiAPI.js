@@ -1,13 +1,11 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { evaInstructions } from "./hooks/eva-config";
 
-const YOUR_API_KEY =__API_URL__;
+const YOUR_API_KEY = __API_URL__;
 const ai = new GoogleGenerativeAI(YOUR_API_KEY);
 
 async function gemini(history) {
-
-    const model = ai.getGenerativeModel({ model: "gemini-2.0-flash" });
-
+    const model = ai.getGenerativeModel({}); // No model specified
 
     try {
         const result = await model.generateContent({
@@ -25,10 +23,9 @@ async function gemini(history) {
             .replace(/\:\s*$/gm, '').trim();
         return response;
     } catch (err) {
-        console.log("Error in API : ", err)
+        console.log("Error in API : ", err);
+        return null; 
     }
-
 }
 
 export default gemini;
-
