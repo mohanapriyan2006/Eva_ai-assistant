@@ -10,6 +10,31 @@
 
 ---
 
+
+## 📸 See Eva in Action!
+
+*They say a picture is worth a thousand words, so here are three thousand words about how amazing Eva looks:*
+
+![Eva's Beautiful Interface](./screenshots/image1.png)
+![Eva Being Helpful](./screenshots/image2.png)
+![Eva in Full Glory](./screenshots/image3.png)
+
+## 🎬 Watch the Magic Happen!
+
+![Eva Live Demo](./screenshots/preview.gif "Watch Eva work her magic!")
+
+*She's even more impressive in motion! 🎭*
+
+## 🎥 Deep Dive with the Creator
+
+Want to know the story behind Eva? Check out this awesome explanation:
+
+🎬 [**Watch the Behind-the-Scenes Video**](https://www.linkedin.com/posts/mohanapriyan-m2006_ai-reactjs-tailwindcss-activity-7326215037503557634-xM6L?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEdfjWABL_2j98un4JlBtZDRvHOOIBs2IsE) 🍿
+
+*Grab some popcorn – it's a good one!*
+
+---
+
 ## 👋 What Makes Eva Special?
 
 Imagine having a friend who's always available, never judges your questions, and can talk to you just like a real person. That's Eva! Whether you're feeling chatty and want to type, or you're hands-deep in cooking and need to ask something out loud – Eva's got you covered.
@@ -35,29 +60,6 @@ Imagine having a friend who's always available, never judges your questions, and
 - **🧠 Brain Power:** Gemini AI (the genius behind Eva's smart responses)
 - **🎙️ Voice Magic:** Web Speech API (for those "OMG, she actually understood me!" moments)
 
-## 📸 See Eva in Action!
-
-*They say a picture is worth a thousand words, so here are three thousand words about how amazing Eva looks:*
-
-![Eva's Beautiful Interface](./screenshots/image1.png)
-![Eva Being Helpful](./screenshots/image2.png)
-![Eva in Full Glory](./screenshots/image3.png)
-
-## 🎬 Watch the Magic Happen!
-
-![Eva Live Demo](./screenshots/preview.gif "Watch Eva work her magic!")
-
-*She's even more impressive in motion! 🎭*
-
-## 🎥 Deep Dive with the Creator
-
-Want to know the story behind Eva? Check out this awesome explanation:
-
-🎬 [**Watch the Behind-the-Scenes Video**](https://www.linkedin.com/posts/mohanapriyan-m2006_ai-reactjs-tailwindcss-activity-7326215037503557634-xM6L?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEdfjWABL_2j98un4JlBtZDRvHOOIBs2IsE) 🍿
-
-*Grab some popcorn – it's a good one!*
-
----
 
 <div align="center">
 
